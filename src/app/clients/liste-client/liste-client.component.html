@@ -1,0 +1,64 @@
+<div class="container">
+    <h4 class="fst-italic">Liste des clients</h4>
+</div><br>
+
+<div class="container">
+  <button class="btn btn-primary d-flex" routerLink="/Clients/Nouveauclient"><span class="material-icons">
+    person_add
+    </span></button>
+</div><br>
+  
+<div class="container">
+  <div class="row p-3">
+    <div class="col-md-4" *ngFor="let item of listcli">
+      <div class="card" style="width: 18rem;" *ngIf="!item.isedit; else elseBlock">
+        <div class="card-body">
+          <h4 class="card-title">{{item.nom}} {{item.prenom}}</h4><br>
+          <h6 class="card-subtitle mb-2">Mail:</h6><p>{{item.mail}}</p>
+          <h6 class="card-subtitle mb-2">Contact:</h6><p>{{item.contact}}</p>
+          <h6 class="card-subtitle mb-2">Adresse:</h6><p>{{item.adresse}}</p>
+          <h6 class="card-subtitle mb-2">Ville:</h6><p>{{item.ville}}</p>
+          <a (click)= "ModifierClient(item)" class="btn btn-primary">Modifier</a>
+          <a (click)= "SupprimerClient(item.id)" class="btn btn-danger">Supprimer</a>
+        </div>
+      </div> <br><br>
+
+      <ng-template #elseBlock>
+        <div class="card" style="width: 18rem;">
+          <div class="p-3">
+            <div class="card-body">
+              <h4 class="card-title">Modifier client</h4><br>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" [(ngModel)] = "item.editnom" class="form-control" >
+              </div>
+              <div class="col">
+                <input type="text" [(ngModel)] = "item.editprenom" class="form-control">
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col">
+                <input type="text" [(ngModel)] = "item.editmail" class="form-control" >
+              </div>
+              <div class="col">
+                <input type="text" [(ngModel)] = "item.editcontact" class="form-control" >
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col">
+                <input type="text" [(ngModel)] = "item.editadresse" class="form-control" >
+              </div>
+              <div class="col">
+                <input type="text" [(ngModel)] = "item.editville" class="form-control" >
+              </div>
+            </div><br>
+            <a class="btn btn-warning" (click)="UpdateClient(item)" >Valider</a>
+            <a class="btn btn-danger" (click)="item.isedit = false" >Annuler</a>
+          </div>
+        </div> 
+      </ng-template>
+
+    </div>
+  </div>
+</div>

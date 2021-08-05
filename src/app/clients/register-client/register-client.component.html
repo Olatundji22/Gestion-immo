@@ -1,0 +1,33 @@
+<div class="container"><br>
+    <form [formGroup]='clientForm'  >
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nom" formControlName="nom" required>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Prénoms" formControlName="prenom" required>
+          </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+              <input type="mail" class="form-control" placeholder="Mail" formControlName="mail" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Contact" formControlName="contact" required>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Adresse" formControlName="adresse" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Ville" formControlName="ville" required>
+            </div>
+          </div><br>
+          <button class="btn btn-success" routerLink="/Clients/Listeclient" [disabled]="!clientForm.valid"  (click)="creatclient()" >Enrégistrer</button>
+      </form>
+      <div>
+        <h5>{{message}}</h5>
+      </div>
+      
+</div>

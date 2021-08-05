@@ -1,0 +1,26 @@
+<div class="container"><br>
+    <form [formGroup]='biensForm'>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" formControlName="libelle" placeholder="Libellé" required>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="typeb" placeholder="Type ex: T1, T2, Studio" required>
+          </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" formControlName="adresse" placeholder="Adresse" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" formControlName="ville" placeholder="Ville" required>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" formControlName="description" placeholder="Description" required></textarea>
+            </div>
+        </div><br>
+        <button class="btn btn-success" routerLink="/Propriétés/Listebiens" [disabled]="!biensForm.valid" (click)="creatbiens()">Enrégistrer</button>
+    </form>
+</div>

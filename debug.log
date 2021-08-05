@@ -1,0 +1,5 @@
+[0610/111405.446:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[0610/112425.206:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: La longueur d’enregistrement d’informations spécifiée ne correspond pas à la longueur nécessaire pour la classe d’informations spécifiée. (0xc0000004)
+[0611/103107.660:ERROR:directory_reader_win.cc(43)] FindFirstFile: Le chemin d’accès spécifié est introuvable. (0x3)
+[0611/103107.700:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\alyol\AppData\Local\CryptoTab Browser\User Data\Crashpad\attachments\d63968fc-a320-4772-982a-9512b20bf60e: Le chemin d’accès spécifié est introuvable. (0x3)
+[0611/103107.716:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\alyol\AppData\Local\CryptoTab Browser\User Data\Crashpad\attachments\9877eb60-e9e6-4cba-b161-df5a21e2322a: Le chemin d’accès spécifié est introuvable. (0x3)
