@@ -1,4 +1,4 @@
-Application de Gestion Immobilière : Projet personnel 
+Application de Gestion Immobilière : Projet personnel réaliser avec Angular
 
 ATENTION!!! Projet toujous en cours donc incomplet
 
